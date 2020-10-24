@@ -19,11 +19,19 @@
 //   return [...str].reverse().join('')} 
 
 function reverse(str){
-    let reversedStr = ''
-    for(let character of str){
-       reversedStr = character + reversedStr;
-    }
-    return reversedStr
+  return str.split('').reduce((acc,crv)=>{
+   return crv + acc
+  },'')
 }
+
+// function reverse(str){
+//     let reversedStr = ''
+//     for(let character of str){
+//        reversedStr = character + reversedStr;
+//     }
+//     return reversedStr
+// }
+
+
 
 module.exports = reverse;
