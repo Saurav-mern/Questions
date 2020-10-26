@@ -18,13 +18,21 @@
 //   }
 // }
 
+//  const palindrome = (str) => {
+//   str1 = str.split('').reverse().join('')
+//   // return str1 === str;  will return boolean value
+//   if(str1 == str){
+//     return true
+//   } else {
+//     return false
+//   }
+// }
+
  const palindrome = (str) => {
-  str1 = str.split('').reverse().join('')
-  if(str1 == str){
-    return true
-  } else {
-    return false
-  }
+  return [...str].every((char, index) => {
+      return char === str[str.length - index -1]
+  })
 }
+
 
 module.exports = palindrome;
