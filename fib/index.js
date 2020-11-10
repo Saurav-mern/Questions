@@ -8,6 +8,17 @@
 // Example:
 //   fib(4) === 3
 
+
+//My take on fibonacci series
+// const fibonacci = (n) => {
+//   const array = [0,1]
+//   for(let i = 2; i < n+1; i++){
+//     array.push(array[i-2]+array[i-1])
+//   }
+//   console.log(array[n])
+//   console.log(array)
+// }
+
 function fib(n) {}
 
 module.exports = fib;
