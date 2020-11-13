@@ -10,14 +10,18 @@
 
 
 //My take on fibonacci series
-// const fibonacci = (n) => {
-//   const array = [0,1]
-//   for(let i = 2; i < n+1; i++){
-//     array.push(array[i-2]+array[i-1])
-//   }
-//   console.log(array[n])
-//   console.log(array)
-// }
+const fib = (n) => {
+  const array = [0,1]
+  for(let i = 2; i <= n; i++){
+    const a = array[i-1]
+    const b = array[i-2]
+    array.push(a+b)
+  }
+  console.log(array)
+  return array[n]
+}
+
+fib(8)
 // const fibonacci = (n) => {
 //   if(n<2){
 //     return n
