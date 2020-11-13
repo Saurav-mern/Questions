@@ -10,24 +10,46 @@
 
 
 //My take on fibonacci series
-const fib = (n) => {
-  const array = [0,1]
-  for(let i = 2; i <= n; i++){
-    const a = array[i-1]
-    const b = array[i-2]
-    array.push(a+b)
+// const fib = (n) => {
+//   const array = [0,1]
+//   for(let i = 2; i <= n; i++){
+//     const a = array[i-1]
+//     const b = array[i-2]
+//     array.push(a+b)
+//   }
+//   console.log(array)
+//   return array[n]
+// }
+
+
+const slowFib = (n) => {
+  if(n<2){
+    return n
   }
-  console.log(array)
-  return array[n]
+  return slowFib(n-1) + slowFib(n-2) 
 }
 
-fib(8)
-// const fibonacci = (n) => {
+const memoizer = (fn) => {
+   const cache = {}
+   return function (...args) {
+      if(cache[args]) {
+        return cache[args]
+      } 
+
+      const result = fn.apply(this, args)
+      cache[args] = result
+
+      return result
+   }
+}
+
+const fib = memoizer(slowFib)
+
+// const fib = (n) => {
 //   if(n<2){
 //     return n
 //   }
-//   return fibonacci(n-1) + fibonacci(n-2) 
+//   return fib(n-1) + fib(n-2) 
 // }
-function fib(n) {}
 
 module.exports = fib;
