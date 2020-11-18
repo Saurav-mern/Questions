@@ -9,22 +9,39 @@
 //   s.push(2);
 //   s.pop(); // returns 2
 //   s.pop(); // returns 1
-// My implementation if stack without using any builtin methods of array
+
+
+// My implementation of stack without using any builtin methods of array
+// class Stack {
+//   constructor(){
+//     this.data = []
+//     this.count = 0
+//   }
+//   push(record){
+//     this.data[this.count] = record;
+//     this.count ++
+//   }
+//   pop(){
+//     this.count --
+//     return this.data[this.count]
+//   }
+//   peek(){
+//     return (this.data[this.count - 1])
+//   }
+// }
+
 class Stack {
   constructor(){
     this.data = []
-    this.count = 0
   }
   push(record){
-    this.data[this.count] = record;
-    this.count ++
+    this.data.push(record)
   }
   pop(){
-    this.count --
-    return this.data[this.count]
+    return this.data.pop()
   }
   peek(){
-    return (this.data[this.count - 1])
+    return this.data[this.data.length -1]
   }
 }
 
