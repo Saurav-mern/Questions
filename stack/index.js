@@ -9,7 +9,23 @@
 //   s.push(2);
 //   s.pop(); // returns 2
 //   s.pop(); // returns 1
-
-class Stack {}
+// My implementation if stack without using any builtin methods of array
+class Stack {
+  constructor(){
+    this.data = []
+    this.count = 0
+  }
+  push(record){
+    this.data[this.count] = record;
+    this.count ++
+  }
+  pop(){
+    this.count --
+    return this.data[this.count]
+  }
+  peek(){
+    return (this.data[this.count - 1])
+  }
+}
 
 module.exports = Stack;
