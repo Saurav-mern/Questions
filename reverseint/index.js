@@ -15,8 +15,8 @@
 //  return parseInt(n.toString().split('').reverse().join(''))*Math.sign(n)
 // }
 
-function reverseInt(n) {
-
+function reverseInt(n){
+  return parseFloat([...n.toString()].reverse().join(''))*Math.sign(n)
 }
 
 module.exports = reverseInt;
