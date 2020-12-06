@@ -15,7 +15,7 @@
 function fizzBuzz(n){
   for(var i=1; i<=n; i++){
     if(i%15 == 0){
-      console.log('fizzbuzz')
+      console.log('Fizzbuzz')
     }
     else if(i%5 == 0){
      console.log('buzz')
