@@ -20,6 +20,12 @@ class Node {
         const node = new Node(data)
         this.children.push(node)
     }
+
+    remove(data){
+        this.children = this.children.filter(node => {
+            return node.data !== data  // return true if you want to keep the element and false if you dont want to keep the element and in here we want to remove the element so we are using !==
+        })
+    }
 }
 
 class Tree {}
